@@ -256,7 +256,8 @@ def process_els_method(results, n, batch_size = None, iteration_nums = 1, double
                     "time": time.time() - start_time,
                     "iterations": i,
                     "accuracy": accuracy,
-                    "x_init": x_init.tolist()
+                    "x_init": x_init.tolist(),
+                    "batch_size":batch_size
                 })
 
             with open(path_to_save, "w") as f:
@@ -270,7 +271,7 @@ def generate_results_by_els(path_to_save: str, stochastic = False, double = Fals
     else:
         results = {}
 
-    for n in range(10, 101, 10):
+    for n in range(10, 11, 10):
         results[n] = []
         if stochastic:
             for m in [1, n/8, n/4, n/2, n]:
