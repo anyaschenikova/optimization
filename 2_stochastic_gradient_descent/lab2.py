@@ -279,7 +279,7 @@ def generate_results_by_els(path_to_save: str, stochastic = False, double = Fals
         else:
             results = process_els_method(results, n, double = double, path_to_save = path_to_save)
 
-generate_results_by_els("results_descent_two.json", double=True, stochastic= False)
+# generate_results_by_els("results_descent_two.json", double=True, stochastic= False)
 
 generate_results_by_els("results_stochastic_one.json", double=False, stochastic= True)
 
